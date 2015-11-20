@@ -65,6 +65,22 @@ class Optimizely extends AbstractProvider
     }
 
     /**
+     * Returns authorization parameters based on provided options.
+     *
+     * @param array $options
+     * 
+     * @return array
+     */
+    protected function getAuthorizationParameters(array $options)
+    {
+        $options = parent::getAuthorizationParameters($options);
+
+        $options['response_type'] = "token";
+
+        return $options;
+    }
+
+    /**
      * Get the default scopes used by this provider.
      *
      * This should not be a complete list of all scopes, but the minimum
