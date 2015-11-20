@@ -7,7 +7,7 @@ This package provides Optimizely OAuth 2.0 support for the PHP League's [OAuth 2
 To install, use composer:
 
 ```
-composer require league/oauth2-github
+composer require widerfunnel/oauth2-optimizely
 ```
 
 ## Usage
