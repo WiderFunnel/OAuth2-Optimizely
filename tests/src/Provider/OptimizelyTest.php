@@ -40,7 +40,7 @@ class OptimizelyTest extends \PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('client_id', $query);
         $this->assertArrayHasKey('redirect_uri', $query);
         $this->assertArrayHasKey('state', $query);
-        $this->assertArrayHasKey('scope', $query);
+        $this->assertArrayHasKey('scopes', $query);
         $this->assertArrayHasKey('response_type', $query);
         $this->assertArrayHasKey('approval_prompt', $query);
         $this->assertNotNull($this->provider->getState());
@@ -55,18 +55,6 @@ class OptimizelyTest extends \PHPUnit_Framework_TestCase
         $uri = parse_url($url);
 
         $this->assertEquals('/oauth2/authorize', $uri['path']);
-    }
-
-    /**
-     * @test
-     */
-    public function it_accepts_scopes()
-    {
-        $options = ['scope' => [uniqid(), uniqid()]];
-
-        $url = $this->provider->getAuthorizationUrl($options);
-
-        $this->assertContains(urlencode(implode(',', $options['scope'])), $url);
     }
 
     /**
