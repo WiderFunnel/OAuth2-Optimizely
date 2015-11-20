@@ -74,8 +74,7 @@ class Optimizely extends AbstractProvider
     protected function getAuthorizationParameters(array $options)
     {
         $options = parent::getAuthorizationParameters($options);
-
-        $options['response_type'] = "token";
+        
         $options['scopes'] = "all";
 
         return $options;
