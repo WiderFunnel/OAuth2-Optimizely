@@ -106,8 +106,8 @@ class Optimizely extends AbstractProvider
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        $user = new OptimizelyResourceOwner($response);
+        $project = new OptimizelyResourceOwner($response);
 
-        return $user->setDomain($this->domain);
+        return $project->setDomain($this->domain);
     }
 }

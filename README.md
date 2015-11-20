@@ -16,6 +16,9 @@ Usage is the same as The League's OAuth client, using `\WiderFunnel\OAuth2\Clien
 
 ### Authorization Code Flow
 
+**Note:** Optimizely does not allow access to the resource owner profile via their API currently. This will be updated 
+accordingly, should the Optimizely API be updated.
+
 ```php
 $provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'clientId'          => '{optimizely-client-id}',
@@ -47,11 +50,8 @@ if (!isset($_GET['code'])) {
     // Optional: Now you have a token you can look up a users profile data
     try {
 
-        // We got an access token, let's now get the user's details
-        $user = $provider->getResourceOwner($token);
-
-        // Use these details to create a new profile
-        
+        // We got an access token, let's now get the projects details
+        $project = $provider->getResourceOwner($token);        
 
     } catch (Exception $e) {
 
@@ -78,7 +78,6 @@ Please see [CONTRIBUTING](https://github.com/widerfunnel/oauth2-optimizely/blob/
 ## Credits
 
 - [WiderFunnel](https://github.com/widerfunnel)
-- [Valentin Prugnaud](https://github.com/foxted)
 - [All Contributors](https://github.com/widerfunnel/oauth2-optimizely/contributors)
 
 
