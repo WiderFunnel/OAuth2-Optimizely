@@ -21,14 +21,14 @@ class Optimizely extends AbstractProvider
      *
      * @var string
      */
-    public $domain = 'https://app.optimizely.com';
+    protected $domain = 'https://app.optimizely.com';
 
     /**
      * Api domain
      *
      * @var string
      */
-    public $apiDomain = 'https://www.optimizelyapis.com/experiment/v1';
+    protected $apiDomain = 'https://www.optimizelyapis.com/experiment/v1';
 
     /**
      * Get authorization url to begin OAuth flow
