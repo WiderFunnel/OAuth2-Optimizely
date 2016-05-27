@@ -1,4 +1,6 @@
 # Optimizely Provider for OAuth 2.0 Client
+[![Packagist](https://img.shields.io/packagist/v/widerfunnel/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://packagist.org/packages/widerfunnel/oauth2-optimizely)
+[![Travis](https://img.shields.io/travis/WiderFunnel-Labs/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://travis-ci.org/WiderFunnel-Labs/OAuth2-Optimizely)
 
 This package provides Optimizely OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
