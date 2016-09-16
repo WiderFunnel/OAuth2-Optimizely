@@ -133,7 +133,7 @@ class OptimizelyTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException League\OAuth2\Client\Provider\Exception\IdentityProviderException
+     * @expectedException \League\OAuth2\Client\Provider\Exception\IdentityProviderException
      */
     public function it_throws_an_exception_when_error_object_is_received()
     {
