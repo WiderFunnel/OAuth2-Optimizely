@@ -66,6 +66,26 @@ if (!isset($_GET['code'])) {
 }
 ```
 
+### Refresh token 
+
+```
+$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
+    'clientId'          => '{optimizely-client-id}',
+    'clientSecret'      => '{optimizely-client-secret}',
+    'redirectUri'       => 'https://example.com/callback-url',
+]);
+
+$existingAccessToken = getAccessTokenFromYourDataStore();
+
+if ($existingAccessToken->hasExpired()) {
+    $newAccessToken = $provider->getAccessToken('refresh_token', [
+        'refresh_token' => $existingAccessToken->getRefreshToken()
+    ]);
+
+    // Purge old access token and store new access token to your data store.
+}
+```
+
 ## Testing
 
 ``` bash

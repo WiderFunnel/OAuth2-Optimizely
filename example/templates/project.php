@@ -18,8 +18,15 @@
             <div class="panel-heading">
                 <h4 class="panel-title">Your API token</h4>
             </div>
-            <div class="panel-body">
-                <?= $_SESSION['oauth2token']; ?>
+            <div class="panel-body text-center">
+                <p>
+                    <code><?= isset($_SESSION['oauth2token']) ? $_SESSION['oauth2token'] : ''; ?></code>
+                </p>
+                <p>
+                    <a href="refresh.php">
+                        Refresh now
+                    </a>
+                </p>
             </div>
         </div>
     </div>
