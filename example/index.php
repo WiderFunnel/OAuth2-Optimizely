@@ -15,7 +15,7 @@ $provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'redirectUri' => getenv('OPTIMIZELY_CALLBACK_URL'),
 ]);
 
-$token = $_SESSION['oauth2token'] ?: null;
+$token = isset($_SESSION['oauth2token']) ? $_SESSION['oauth2token'] : null;
 
 if (!$token) {
     if (!isset($_GET['code'])) {
@@ -38,8 +38,6 @@ if (!$token) {
             'code' => $_GET['code'],
         ]);
 
-        var_dump($token);
-        die;
         $_SESSION['oauth2token'] = $token;
 
         // Optional: Now you have a token you can look up a users profile data
@@ -57,8 +55,6 @@ if (!$token) {
         }
     }
 } else {
-    var_dump($token);
-    die;
     $projects = $provider->getResourceOwner($token)->toArray();
     include_once __DIR__ . '/templates/project.php';
 }
