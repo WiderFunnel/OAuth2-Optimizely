@@ -15,9 +15,9 @@ $provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'redirectUri' => getenv('OPTIMIZELY_CALLBACK_URL'),
 ]);
 
-$token = $_SESSION['oauth2token'];
+$token = $_SESSION['oauth2token'] ?: null;
 
-if(!$token) {
+if (!$token) {
     if (!isset($_GET['code'])) {
 
         // If we don't have an authorization code then get one
@@ -35,9 +35,11 @@ if(!$token) {
 
         // Try to get an access token (using the authorization code grant)
         $token = $provider->getAccessToken('authorization_code', [
-            'code' => $_GET['code']
+            'code' => $_GET['code'],
         ]);
 
+        var_dump($token);
+        die;
         $_SESSION['oauth2token'] = $token;
 
         // Optional: Now you have a token you can look up a users profile data
@@ -53,11 +55,10 @@ if(!$token) {
             // Failed to get user details
             exit('Oh dear...');
         }
-
-        // Use this to interact with an API on the users behalf
-        echo $token->getToken();
     }
 } else {
+    var_dump($token);
+    die;
     $projects = $provider->getResourceOwner($token)->toArray();
     include_once __DIR__ . '/templates/project.php';
 }
