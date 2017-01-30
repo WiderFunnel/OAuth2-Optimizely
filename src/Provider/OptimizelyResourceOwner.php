@@ -1,6 +1,6 @@
 <?php
 
-namespace WiderFunnel\OAuth2\Client\Provider;
+namespace GrowthOptimized\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 

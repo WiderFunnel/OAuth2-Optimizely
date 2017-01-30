@@ -14,7 +14,7 @@ composer require growthoptimized/oauth2-optimizely
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\WiderFunnel\OAuth2\Client\Provider\Optimizely` as the provider.
+Usage is the same as The League's OAuth client, using `\GrowthOptimized\OAuth2\Client\Provider\Optimizely` as the provider.
 
 ### Authorization Code Flow
 
@@ -22,7 +22,7 @@ Usage is the same as The League's OAuth client, using `\WiderFunnel\OAuth2\Clien
 accordingly, should the Optimizely API be updated.
 
 ```php
-$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
+$provider = new GrowthOptimized\OAuth2\Client\Provider\Optimizely([
     'clientId'          => '{optimizely-client-id}',
     'clientSecret'      => '{optimizely-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -69,7 +69,7 @@ if (!isset($_GET['code'])) {
 ### Refresh token 
 
 ```
-$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
+$provider = new GrowthOptimized\OAuth2\Client\Provider\Optimizely([
     'clientId'          => '{optimizely-client-id}',
     'clientSecret'      => '{optimizely-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -94,15 +94,15 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/widerfunnel/oauth2-optimizely/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/GrowthOptimized/OAuth2-Optimizely/blob/master/CONTRIBUTING.md) for details.
 
 
 ## Credits
 
-- [WiderFunnel](https://github.com/widerfunnel)
-- [All Contributors](https://github.com/widerfunnel/oauth2-optimizely/contributors)
+- [GrowthOptimized](https://github.com/GrowthOptimized)
+- [All Contributors](https://github.com/GrowthOptimized/OAuth2-Optimizely/contributors)
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/widerfunnel/oauth2-optimizely/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/GrowthOptimized/OAuth2-Optimizely/blob/master/LICENSE) for more information.
