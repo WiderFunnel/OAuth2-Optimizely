@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "WiderFunnel\\OAuth2\\Client\\": "src/"
+            "GrowthOptimized\\OAuth2\\Client\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WiderFunnel\\OAuth2\\Client\\Test\\": "tests/src/"
+            "GrowthOptimized\\OAuth2\\Client\\Test\\": "tests/src/"
         }
     },
     "extra": {
