@@ -1,12 +1,12 @@
 <?php
 
-namespace GrowthOptimized\OAuth2\Client\Tests\Provider;
+namespace WiderFunnel\OAuth2\Client\Tests\Provider;
 
 use Mockery as m;
 
 /**
  * Class OptimizelyTest
- * @package GrowthOptimized\OAuth2\Client\Tests\Provider
+ * @package WiderFunnel\OAuth2\Client\Tests\Provider
  */
 class OptimizelyTest extends \PHPUnit_Framework_TestCase
 {
@@ -21,7 +21,7 @@ class OptimizelyTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new \GrowthOptimized\OAuth2\Client\Provider\Optimizely([
+        $this->provider = new \WiderFunnel\OAuth2\Client\Provider\Optimizely([
             'clientId' => 'mock_client_id',
             'clientSecret' => 'mock_secret',
             'redirectUri' => 'none',

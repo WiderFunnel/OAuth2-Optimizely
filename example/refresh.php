@@ -9,7 +9,7 @@ session_start();
 $dotenv = new Dotenv(__DIR__ . '/../');
 $dotenv->load();
 
-$provider = new GrowthOptimized\OAuth2\Client\Provider\Optimizely([
+$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'clientId'                => getenv('OPTIMIZELY_CLIENT_ID'),    // The client ID assigned to you by the provider
     'clientSecret'            => getenv('OPTIMIZELY_CLIENT_SECRET'),   // The client password assigned to you by the provider
     'redirectUri'             =>  getenv('OPTIMIZELY_CALLBACK_URL')

@@ -1,12 +1,17 @@
 {
-    "name": "growthoptimized/oauth2-optimizely",
+    "name": "widerfunnel/oauth2-optimizely",
     "description": "Optimizely OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "license": "MIT",
     "authors": [
         {
             "name": "Valentin Prugnaud",
             "email": "valentin.prugnaud@widerfunnel.com",
-            "homepage": "https://github.com/GrowthOptimized/OAuth2-Optimizely"
+            "homepage": "https://github.com/WiderFunnel/OAuth2-Optimizely"
+        },
+        {
+            "name": "Anthony Morris",
+            "email": "anthony.morris@growthoptimized.com",
+            "homepage": "https://github.com/WiderFunnel/OAuth2-Optimizely"
         }
     ],
     "keywords": [
@@ -30,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "GrowthOptimized\\OAuth2\\Client\\": "src/"
+            "WiderFunnel\\OAuth2\\Client\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GrowthOptimized\\OAuth2\\Client\\Test\\": "tests/src/"
+            "WiderFunnel\\OAuth2\\Client\\Test\\": "tests/src/"
         }
     },
     "extra": {

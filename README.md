@@ -1,6 +1,6 @@
 # Optimizely Provider for OAuth 2.0 Client
-[![Packagist](https://img.shields.io/packagist/v/GrowthOptimized/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://packagist.org/packages/growthoptimized/oauth2-optimizely)
-[![Travis](https://img.shields.io/travis/GrowthOptimized/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://travis-ci.org/GrowthOptimized/OAuth2-Optimizely)
+[![Packagist](https://img.shields.io/packagist/v/WiderFunnel/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://packagist.org/packages/widerfunnel/oauth2-optimizely)
+[![Travis](https://img.shields.io/travis/WiderFunnel/OAuth2-Optimizely.svg?maxAge=2592000?style=flat-square)](https://travis-ci.org/WiderFunnel/OAuth2-Optimizely)
 
 This package provides Optimizely OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
@@ -9,12 +9,12 @@ This package provides Optimizely OAuth 2.0 support for the PHP League's [OAuth 2
 To install, use composer:
 
 ```
-composer require growthoptimized/oauth2-optimizely
+composer require widerfunnel/oauth2-optimizely
 ```
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\GrowthOptimized\OAuth2\Client\Provider\Optimizely` as the provider.
+Usage is the same as The League's OAuth client, using `\WiderFunnel\OAuth2\Client\Provider\Optimizely` as the provider.
 
 ### Authorization Code Flow
 
@@ -22,7 +22,7 @@ Usage is the same as The League's OAuth client, using `\GrowthOptimized\OAuth2\C
 accordingly, should the Optimizely API be updated.
 
 ```php
-$provider = new GrowthOptimized\OAuth2\Client\Provider\Optimizely([
+$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'clientId'          => '{optimizely-client-id}',
     'clientSecret'      => '{optimizely-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -69,7 +69,7 @@ if (!isset($_GET['code'])) {
 ### Refresh token 
 
 ```
-$provider = new GrowthOptimized\OAuth2\Client\Provider\Optimizely([
+$provider = new WiderFunnel\OAuth2\Client\Provider\Optimizely([
     'clientId'          => '{optimizely-client-id}',
     'clientSecret'      => '{optimizely-client-secret}',
     'redirectUri'       => 'https://example.com/callback-url',
@@ -94,15 +94,15 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/GrowthOptimized/OAuth2-Optimizely/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/WiderFunnel/OAuth2-Optimizely/blob/master/CONTRIBUTING.md) for details.
 
 
 ## Credits
 
-- [GrowthOptimized](https://github.com/GrowthOptimized)
-- [All Contributors](https://github.com/GrowthOptimized/OAuth2-Optimizely/contributors)
+- [WiderFunnel](https://github.com/WiderFunnel)
+- [All Contributors](https://github.com/WiderFunnel/OAuth2-Optimizely/contributors)
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/GrowthOptimized/OAuth2-Optimizely/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/WiderFunnel/OAuth2-Optimizely/blob/master/LICENSE) for more information.
